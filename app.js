@@ -24,6 +24,11 @@ app.use("/books", getBooksbyId);
 app.use("/books", deleteBook);
 app.use("/books", updateBook);
 
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Book API");
+});
+
 app.listen(3000, () => {
   console.log("Server is running");
 });
